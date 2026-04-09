@@ -1,7 +1,10 @@
 import React from 'react';
+import { useCart } from '../context/CartContext';
 import '../styles/ProductCard.css';
 
-function ProductCard({ product, onAddToCart }) {
+function ProductCard({ product }) {
+  const { addToCart } = useCart();
+
   return (
     <div className="product-card">
       <div className="product-image-container">
@@ -18,13 +21,14 @@ function ProductCard({ product, onAddToCart }) {
           <span className="product-price">${product.price}</span>
           <span className="product-category">{product.category}</span>
         </div>
-        <button className="add-to-cart-btn" onClick={onAddToCart}>
+        <button className="add-to-cart-btn" onClick={() => addToCart(product)}>
           Add to Cart
         </button>
       </div>
     </div>
   );
 }
+
 
 
 export default ProductCard;
