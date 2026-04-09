@@ -58,6 +58,7 @@
   justify-content: space-between;
   align-items: center;
   margin-top: auto;
+  margin-bottom: 15px;
 }
 
 .product-price {
@@ -74,3 +75,26 @@
   border-radius: 20px;
   font-weight: 500;
 }
+
+.add-to-cart-btn {
+  width: 100%;
+  padding: 12px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.add-to-cart-btn:hover {
+  background: #764ba2;
+  transform: scale(1.02);
+  box-shadow: 0 4px 10px rgba(102, 126, 234, 0.3);
+}
+
+.add-to-cart-btn:active {
+  transform: scale(0.98);
+}
